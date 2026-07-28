@@ -194,10 +194,6 @@ result = process_cycle(
 repaired_voltage = result["voltage"]
 ```
 
-## Scope of This Release
-
-This repository intentionally focuses on the reusable BatteryTwin system implementation. It excludes paper-specific experiment launchers, hyperparameter sweeps, plotting scripts, checkpoints, generated result files, and raw measurements. Those artifacts are not required to inspect the calibration, simulation, and guardrail mechanisms that implement the system described in the paper.
-
 ## Citation
 
 If this work is accepted, citation information will be added in the camera-ready release.
