@@ -1,0 +1,17 @@
+{
+  "de_config": {
+    "maxiter": 25,
+    "popsize": 12,
+    "tol": 0.001,
+    "mutation": [0.5, 1.0],
+    "recombination": 0.7,
+    "polish": true
+  },
+  "objective_weights": {
+    "beta_T": 0.2,
+    "head_tail_weight": 10.0,
+    "grad_weight": 0.5,
+    "cutoff_weight": 0.0,
+    "cutoff_tol_s": 20.0
+  }
+}
