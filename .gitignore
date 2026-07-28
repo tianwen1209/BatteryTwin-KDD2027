@@ -3,3 +3,4 @@ __pycache__/
 calibration_output/
 *.npz
 *.pt
+BatteryTwin- A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation.pdf
