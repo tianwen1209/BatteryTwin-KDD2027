@@ -114,8 +114,22 @@ src/batterytwin/
     api.py
 configs/
   calibration.default.json
+datasets/
+  experimental/
+  dt_augmented/
 examples/
 ```
+
+## Datasets
+
+The repository separates data assets by provenance:
+
+| Directory | Contents |
+| --- | --- |
+| [`datasets/experimental/`](datasets/experimental/) | Release notice for the real experimental dataset and benchmark records. |
+| [`datasets/dt_augmented/`](datasets/dt_augmented/) | Two small, fully simulated DT-augmentation examples for inspecting the array format. |
+
+The experimental dataset and the full benchmark package will be released after acceptance. The included DT examples contain no raw experimental measurements and can be loaded with NumPy.
 
 ## Installation
 

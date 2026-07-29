@@ -2,5 +2,6 @@ __pycache__/
 *.py[cod]
 calibration_output/
 *.npz
+!datasets/dt_augmented/*.npz
 *.pt
 BatteryTwin- A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation.pdf
