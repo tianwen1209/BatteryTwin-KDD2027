@@ -1,8 +1,12 @@
 # BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation
 
+<p align="center">
+  <img src="assets/digital_twin_screenshots/BatteryTwin.png" alt="BatteryTwin system" width="100%">
+</p>
+
 This repository contains the core implementation of **BatteryTwin**, a physics-grounded battery data-curation system accompanying the submitted paper *BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation*.
 
-BatteryTwin calibrates a cell-specific electrochemical digital twin from limited measurements, uses the calibrated twin to generate physically admissible trajectories and latent states, and applies a physics guardrail to detect and repair inconsistent battery records. The implementation is organized around reusable system components rather than paper-specific experiment launchers or figure-generation scripts.
+BatteryTwin calibrates a cell-specific electrochemical digital twin from limited measurements, uses the calibrated twin to generate physically admissible trajectories and latent states, and applies a physics guardrail to detect and repair inconsistent battery records.
 
 This is an anonymous code release for double-blind review.
 
@@ -41,6 +45,50 @@ Virtual data curation    Physics guardrail
        +--------+--------+
                 v
 Physics-consistent curated battery data
+```
+
+## Implemented BatteryTwin System
+
+BatteryTwin has been realized as an end-to-end system demonstrator rather than only a collection of offline model routines. The system connects battery measurements, a continuously calibrated electrochemical twin, physics-grounded diagnostics, counterfactual simulation, and decision support in one operational workflow. A companion demo video records this workflow in action; the five views below show the corresponding implemented capabilities.
+
+Together, these views provide the system-level counterpart of the paper's technical pipeline: experimental observations synchronize the twin, the calibrated model exposes otherwise unobservable degradation states, the virtual laboratory evaluates unseen operating regimes, and physics-aware monitoring keeps model outputs and battery records within admissible behavior.
+
+### 1. Physical-to-digital synchronization
+
+![Physical battery and its digital counterpart](assets/digital_twin_screenshots/BatteryTwin1.png)
+
+The opening view presents the central abstraction of BatteryTwin: a persistent mapping between the physical battery system and its computational counterpart. Measurements from the real asset anchor the digital representation, while the calibrated twin provides a physics-consistent state space in which the battery can be inspected beyond the externally measured signals. This bidirectional perspective underlies the paper's use of the twin as continuously synchronized data infrastructure.
+
+### 2. Unified real-time observability
+
+![BatteryTwin real-time system overview](assets/digital_twin_screenshots/BatteryTwin2.png)
+
+The overview consolidates asset status, power and energy flow, voltage, current, temperature, efficiency, SOC, SOH, cycle count, short-horizon trends, and operating events. It turns the measurement vector used by the calibration stack into an operational monitoring surface and maintains a common context for simulation, diagnostics, and data curation. The result is traceable alignment between incoming observations and the state of the calibrated twin.
+
+### 3. Physics-grounded diagnostics and latent-state inspection
+
+![BatteryTwin diagnostics and degradation-state estimation](assets/digital_twin_screenshots/BatteryTwin3.png)
+
+The diagnostics view evaluates agreement between the physical asset and the calibrated twin through voltage and temperature residual metrics, while exposing degradation quantities that routine sensors cannot directly observe. These include lithium-inventory loss, cyclable-lithium capacity, SEI-related loss and resistance, lithium-plating loss, and degradation rates. This view operationalizes two central claims of the paper: calibration is a standing synchronization mechanism, and physical interpretability comes from inspecting meaningful internal states rather than relying only on a black-box health score. Diagnostic outcomes can also trigger recalibration and support physics-based anomaly review.
+
+### 4. Counterfactual prediction as a virtual battery laboratory
+
+![BatteryTwin configurable operating-condition prediction](assets/digital_twin_screenshots/BatteryTwin4.png)
+
+The prediction workspace exposes configurable charge and discharge rates and returns synchronized SOC, temperature, voltage, and current trajectories, together with degradation history, energy and capacity summaries, and operating warnings. This is the interactive realization of BatteryTwin's data-augmentation engine: a calibrated cell can be exercised under shifted, extreme, or otherwise costly operating conditions without requiring a new physical aging campaign. The generated trajectories remain coupled through the same electrochemical, thermal, and degradation dynamics used during calibration.
+
+### 5. Constraint-aware operational optimization
+
+![BatteryTwin constraint-aware optimization workflow](assets/digital_twin_screenshots/BatteryTwin5.png)
+
+The optimization view demonstrates the downstream decision layer enabled by the calibrated twin. An operator can select thermal-management, fast-charging, or health-management objectives, impose operating limits, evaluate a candidate policy against the digital twin, and compare baseline and optimized behavior before applying a recommendation to the physical asset. In this role, BatteryTwin acts as a physics-grounded evaluation environment: proposed actions are assessed against predicted temperature, charge time, efficiency, and degradation behavior rather than optimized against an unconstrained surrogate alone.
+
+The complete demonstration therefore spans the full operational loop:
+
+```text
+physical asset -> synchronized twin -> diagnostics -> prediction -> constrained decision support
+       ^                                                                    |
+       +-------------------------- new observations -------------------------+
 ```
 
 ## Paper-to-Code Map
