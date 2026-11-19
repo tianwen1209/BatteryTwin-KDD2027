@@ -1,7 +1,7 @@
 # BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation
 
 > **🎉 Accepted to the KDD 2027 Research Track** (33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining).
->
+
 > **🔋 Try the full system online:** to explore the complete functionality and the datasets, visit our **Battery Data Intelligence Platform** at **[https://batterytwin.ai/](https://batterytwin.ai/)**.
 
 <p align="center">
