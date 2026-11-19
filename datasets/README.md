@@ -25,6 +25,6 @@ If you use the BatteryTwin dataset or benchmark in your research, please cite:
   series    = {KDD '27},
   year      = {2027},
   publisher = {Association for Computing Machinery},
-  address   = {New York, NY, USA}
+  address   = {San Jose, CA, USA}
 }
 ```

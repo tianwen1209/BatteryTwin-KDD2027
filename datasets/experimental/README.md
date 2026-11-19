@@ -18,6 +18,6 @@ If you use this dataset in your research, please cite:
   series    = {KDD '27},
   year      = {2027},
   publisher = {Association for Computing Machinery},
-  address   = {New York, NY, USA}
+  address   = {San Jose, CA, USA}
 }
 ```
