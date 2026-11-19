@@ -61,25 +61,25 @@ The opening view presents the central abstraction of BatteryTwin: a persistent m
 
 ### 2. Unified real-time observability
 
-![BatteryTwin real-time system overview](assets/digital_twin_screenshots/BatteryTwin2_anonymized.png)
+![BatteryTwin real-time system overview](assets/digital_twin_screenshots/BatteryTwin2.png)
 
 The overview consolidates asset status, power and energy flow, voltage, current, temperature, efficiency, SOC, SOH, cycle count, short-horizon trends, and operating events. It turns the measurement vector used by the calibration stack into an operational monitoring surface and maintains a common context for simulation, diagnostics, and data curation. The result is traceable alignment between incoming observations and the state of the calibrated twin.
 
 ### 3. Physics-grounded diagnostics and latent-state inspection
 
-![BatteryTwin diagnostics and degradation-state estimation](assets/digital_twin_screenshots/BatteryTwin3_anonymized.png)
+![BatteryTwin diagnostics and degradation-state estimation](assets/digital_twin_screenshots/BatteryTwin3.png)
 
 The diagnostics view evaluates agreement between the physical asset and the calibrated twin through voltage and temperature residual metrics, while exposing degradation quantities that routine sensors cannot directly observe. These include lithium-inventory loss, cyclable-lithium capacity, SEI-related loss and resistance, lithium-plating loss, and degradation rates. This view operationalizes two central claims of the paper: calibration is a standing synchronization mechanism, and physical interpretability comes from inspecting meaningful internal states rather than relying only on a black-box health score. Diagnostic outcomes can also trigger recalibration and support physics-based anomaly review.
 
 ### 4. Counterfactual prediction as a virtual battery laboratory
 
-![BatteryTwin configurable operating-condition prediction](assets/digital_twin_screenshots/BatteryTwin4_anonymized.png)
+![BatteryTwin configurable operating-condition prediction](assets/digital_twin_screenshots/BatteryTwin4.png)
 
 The prediction workspace exposes configurable charge and discharge rates and returns synchronized SOC, temperature, voltage, and current trajectories, together with degradation history, energy and capacity summaries, and operating warnings. This is the interactive realization of BatteryTwin's data-augmentation engine: a calibrated cell can be exercised under shifted, extreme, or otherwise costly operating conditions without requiring a new physical aging campaign. The generated trajectories remain coupled through the same electrochemical, thermal, and degradation dynamics used during calibration.
 
 ### 5. Constraint-aware operational optimization
 
-![BatteryTwin constraint-aware optimization workflow](assets/digital_twin_screenshots/BatteryTwin5_anonymized.png)
+![BatteryTwin constraint-aware optimization workflow](assets/digital_twin_screenshots/BatteryTwin5.png)
 
 The optimization view demonstrates the downstream decision layer enabled by the calibrated twin. An operator can select thermal-management, fast-charging, or health-management objectives, impose operating limits, evaluate a candidate policy against the digital twin, and compare baseline and optimized behavior before applying a recommendation to the physical asset. In this role, BatteryTwin acts as a physics-grounded evaluation environment: proposed actions are assessed against predicted temperature, charge time, efficiency, and degradation behavior rather than optimized against an unconstrained surrogate alone.
 
@@ -177,7 +177,7 @@ The repository separates data assets by provenance:
 | [`datasets/experimental/`](datasets/experimental/) | Release notice for the real experimental dataset and benchmark records. |
 | [`datasets/dt_augmented/`](datasets/dt_augmented/) | Two small, fully simulated DT-augmentation examples for inspecting the array format. |
 
-The experimental dataset and the full benchmark package will be released after acceptance. The included DT examples contain no raw experimental measurements and can be loaded with NumPy.
+The experimental dataset and the full benchmark package will be released in a future update. The included DT examples contain no raw experimental measurements and can be loaded with NumPy.
 
 ## Installation
 
