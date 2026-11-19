@@ -5,3 +5,4 @@ calibration_output/
 !datasets/dt_augmented/*.npz
 *.pt
 BatteryTwin- A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation.pdf
+auto_push_daily.sh
