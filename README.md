@@ -1,14 +1,14 @@
 # BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation
 
+> **🎉 Accepted to the KDD 2027 Research Track** (33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining).
+
 <p align="center">
   <img src="assets/digital_twin_screenshots/BatteryTwin.png" alt="BatteryTwin system" width="100%">
 </p>
 
-This repository contains the core implementation of **BatteryTwin**, a physics-grounded battery data-curation system accompanying the submitted paper *BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation*.
+This repository contains the core implementation of **BatteryTwin**, a physics-grounded battery data-curation system accompanying the paper *BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation*, accepted to the KDD 2027 Research Track.
 
 BatteryTwin calibrates a cell-specific electrochemical digital twin from limited measurements, uses the calibrated twin to generate physically admissible trajectories and latent states, and applies a physics guardrail to detect and repair inconsistent battery records.
-
-This is an anonymous code release for double-blind review.
 
 ## Why BatteryTwin
 
@@ -258,4 +258,16 @@ repaired_voltage = result["voltage"]
 
 ## Citation
 
-If this work is accepted, citation information will be added in the camera-ready release.
+If you find BatteryTwin useful in your research, please cite our paper:
+
+```bibtex
+@inproceedings{zhu2027batterytwin,
+  title     = {BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation},
+  author    = {Zhu, Tianwen and Wang, Hao and Du, Yingpeng and Su, Lingzhi and Xu, Yan and Wen, Yonggang},
+  booktitle = {Proceedings of the 33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  series    = {KDD '27},
+  year      = {2027},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA}
+}
+```
