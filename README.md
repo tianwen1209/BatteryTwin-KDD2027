@@ -1,4 +1,6 @@
-# BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation
+# [KDD 2027] BatteryTwin: A Physics-Grounded Digital Twin and Benchmark for Battery Data Curation
+
+### Battery Digital Twin · Battery Dataset · SOH Estimation · Battery Degradation · Electrochemical (DFN / PyBaMM) Model Calibration · Data Augmentation
 
 > **🎉 Accepted to the KDD 2027 Research Track** (33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining).
 
