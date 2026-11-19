@@ -274,6 +274,6 @@ If you find BatteryTwin useful in your research, please cite our paper:
   series    = {KDD '27},
   year      = {2027},
   publisher = {Association for Computing Machinery},
-  address   = {New York, NY, USA}
+  address   = {San Jose, CA, USA}
 }
 ```
