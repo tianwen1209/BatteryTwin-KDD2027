@@ -174,16 +174,16 @@ The repository separates data assets by provenance:
 
 | Directory | Contents |
 | --- | --- |
-| [`datasets/experimental/`](datasets/experimental/) | Download instructions for the real experimental dataset and benchmark records. |
+| [`datasets/experimental/`](datasets/experimental/) | Download instructions for the real experimental battery dataset. |
 | [`datasets/dt_augmented/`](datasets/dt_augmented/) | Two small, fully simulated DT-augmentation examples for inspecting the array format. |
 
-The experimental dataset and the full benchmark package are hosted on OneDrive because of their size:
+The real experimental battery dataset, containing battery cycling results measured at 2C and 3C C-rates and at 25 °C and 40 °C ambient temperatures, is hosted on OneDrive because of its size:
 
 **[Download the BatteryTwin dataset (OneDrive)](https://entuedu-my.sharepoint.com/:f:/g/personal/tianwen001_e_ntu_edu_sg/IgBUuRkdcQGoT62Vo3JPqvCJAerBQn7HmSPfo838sJILnH8?e=gm1uAy)**
 
 The DT examples included in this repository are fully simulated and can be loaded with NumPy.
 
-If you use the BatteryTwin dataset or benchmark in your research, please cite our paper (BibTeX in [Citation](#citation)).
+If you use the BatteryTwin dataset in your research, please cite our paper (BibTeX in [Citation](#citation)).
 
 ## Installation
 

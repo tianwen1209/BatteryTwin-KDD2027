@@ -1,6 +1,6 @@
 # Experimental Dataset
 
-The real experimental battery dataset and the complete benchmark records are hosted on OneDrive because of their size:
+The real experimental battery dataset contains battery cycling results measured at 2C and 3C C-rates and at 25 °C and 40 °C ambient temperatures. It is hosted on OneDrive because of its size:
 
 **[Download the BatteryTwin dataset (OneDrive)](https://entuedu-my.sharepoint.com/:f:/g/personal/tianwen001_e_ntu_edu_sg/IgBUuRkdcQGoT62Vo3JPqvCJAerBQn7HmSPfo838sJILnH8?e=gm1uAy)**
 
